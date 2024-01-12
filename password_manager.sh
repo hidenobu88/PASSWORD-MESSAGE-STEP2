@@ -65,10 +65,22 @@ get-pass-area
         echo "パスワードの追加は成功しました。"
 	;
 
+      # Exitが選択された場合の処理コード
+       "Exit")
+           echo "Thank you!"
+           exit
+           ;;
+       *)
+           echo "入力が間違えています。Add Password/Get Password/Exitから入力してください。"
+           ;;
+
+    esac
+
+done
 
 
 
-
+exit-area
 
 
 
@@ -82,3 +94,4 @@ get-pass-area
 
 
 done
+
