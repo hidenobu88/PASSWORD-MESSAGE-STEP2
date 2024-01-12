@@ -60,38 +60,21 @@ get-pass-area
               fi
               ;
               
-	# 入力された情報を保存する処理
-	echo "$ServiceName:$UserName:$PassWord" >> password_manager.sh
-        echo "パスワードの追加は成功しました。"
-	;
+	      # 入力された情報を保存する処理
+	      echo "$ServiceName:$UserName:$PassWord" >> password_manager.sh
+              echo "パスワードの追加は成功しました。"
+	      ;
 
-      # Exitが選択された場合の処理コード
-       "Exit")
-           echo "Thank you!"
-           exit
-           ;;
+     # Exitが選択された場合の処理コード
+        "Exit")
+          echo "ありがとうございます！（Thank you!）"
+          exit
+          ;;
        *)
-           echo "入力が間違えています。Add Password/Get Password/Exitから入力してください。"
-           ;;
-
-    esac
-
-done
-
-
-
-exit-area
-
-
-
-
-
-
- 
-
-  esac
-
-
+          echo "入力が間違えています。Add Password/Get Password/Exitから入力してください。"
+          ;;
+	  
+   esac
 
 done
 
