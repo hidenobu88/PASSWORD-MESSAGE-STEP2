@@ -13,10 +13,18 @@ while true; do
 # ユーザーからの入力を受け取りは、変数 selectで対応 
   read select
 
+get-pass-area
 # シェルスクリプトでのcase文の閉じタグは「esac」
 
   case $select in
+     
+     # Add Passwordの処理（read関数で入力受付の変数も設定）
+     "Add Password")
+        read -p "サービス名を入力してください: " ServiceName
+	read -p "ユーザー名を入力してください: " UserName
+	read -p "パスワードを入力してください: " PassWord
 
+get-pass-area
      # Add Passwordが選択された場合の処理コード
          "Add Password")
          read -p "サービス名を入力してください: " ServiceName
@@ -51,6 +59,11 @@ while true; do
                   echo "パスワード：$password"
               fi
               ;
+              
+	# 入力された情報を保存する処理
+	echo "$ServiceName:$UserName:$PassWord" >> password_manager.sh
+        echo "パスワードの追加は成功しました。"
+	;
 
 
 
@@ -62,57 +75,9 @@ while true; do
 
 
 
-
-
-
-
-
-
-
+ 
 
   esac
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
